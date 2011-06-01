@@ -3,10 +3,10 @@ set :stages, %w(staging production)
 set :default_stage, "staging"
 require "capistrano/ext/multistage"
 
-set :application, "APPLICATION NAME"
+set :application, "What's Your Day"
 
 # repository info
-set :repository,  "git@github.com:CCI-Studios/PROJECT.git"
+set :repository,  "git@github.com:CCI-Studios/what-s-your-day.git"
 set :scm, :git
 
 # ssh settings
