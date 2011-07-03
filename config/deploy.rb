@@ -10,7 +10,7 @@ set :repository,  "git@github.com:CCI-Studios/what-s-your-day.git"
 set :scm, :git
 
 # ssh settings
-set :user, "sgives"
+set :user, "whatsyou"
 set :use_sudo, false
 
 # Joomla
@@ -77,19 +77,10 @@ namespace :deploy do
     end
 
     task :install_default do
-      nooku_install
+      nooku::setup
       # install sh404sef
       # install jce
       # install akeeba
-    end
-
-    task :nooku_install do
-      run <<-cmd
-        mkdir -p #{deploy_to}/shared &&
-        cd #{deploy_to}/shared &&
-        svn checkout -q #{nooku_url} nooku &&
-        ./symlinker #{deploy_to}/shared/nooku #{public}
-      cmd
     end
 
     task :cleanup do
@@ -114,7 +105,7 @@ namespace :deploy do
     task :update do
       run <<-cmd
         cd #{deploy_to}/shared/nooku &&
-        svn update -q
+        svn update -q --force --accept 'theirs-full'
       cmd
     end
   end
@@ -149,6 +140,7 @@ namespace :deploy do
     extensions.each do |path|
       run "#{deploy_to}/shared/symlinker #{current_path}/#{path} #{public}"
     end
+    run "ln -nfs #{current_path}/public/.htaccess #{public}/.htaccess"
   end
 
   task :start do ; end
