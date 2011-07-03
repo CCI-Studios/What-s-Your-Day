@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="price" label="Price" description="Price for a single day" type="text" default="100" />
+		<param name="renewal_cutoff" label="Renewal Cutoff Date" description="This is the last full day when people from the previous year have priority for day renewals." type="calendar" format="%d-%m" />
+		<param name="late_purchase" label="End of Year Special" description="This is the start date when the end of year special (next year is included) begins." type="calendar" format="%d-%m" />
+	</params>
+</config>
