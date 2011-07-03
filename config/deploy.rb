@@ -118,7 +118,7 @@ namespace :deploy do
 
       run <<-CMD
         cd #{deploy_to}/shared &&
-        curl -s #{symlinker_url} > symlinker &&
+        curl -kLs -o symlinker #{symlinker_url} &&
         chmod +x symlinker
       CMD
     end
