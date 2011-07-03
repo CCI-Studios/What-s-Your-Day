@@ -114,6 +114,7 @@ namespace :deploy do
     transaction do
       run "mkdir -p #{deploy_to}/releases"
       run "mkdir -p #{deploy_to}/shared"
+      run "mkdir -p #{deploy_to}/shared/com_wyd_uploads"
       run "mkdir -p #{public}"
 
       run <<-CMD
@@ -141,6 +142,8 @@ namespace :deploy do
       run "#{deploy_to}/shared/symlinker #{current_path}/#{path} #{public}"
     end
     run "ln -nfs #{current_path}/public/.htaccess #{public}/.htaccess"
+    
+    run "ln -nfs #{deploy_to}/shared/com_wyd_uploads #{public}/media/com_wyd/uploads"
   end
 
   task :start do ; end
