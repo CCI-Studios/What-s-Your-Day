@@ -6,7 +6,7 @@ require "capistrano/ext/multistage"
 set :application, "What's Your Day"
 
 # repository info
-set :repository,  "git@github.com:CCI-Studios/what-s-your-day.git"
+set :repository,  "git@github.com:CCI-Studios/What-s-Your-Day.git"
 set :scm, :git
 
 # ssh settings
