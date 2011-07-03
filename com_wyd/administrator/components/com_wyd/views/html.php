@@ -2,5 +2,4 @@
 
 class ComWYDViewHtml extends ComDefaultViewHtml
 {
-	
 }
