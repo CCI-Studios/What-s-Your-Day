@@ -5,6 +5,6 @@ set :branch, "development"
 role :app, "whatsyourday.com"
 
 # directories
-set :deploy_to, "/home/wyd/subdomains/dev"
+set :deploy_to, "/home/whatsyou/subdomains/v2"
 set :public, "#{deploy_to}/public_html"
-set :extensions, %w[plg_ie6 public template]
+set :extensions, %w[com_cci com_wyd plg_ie6 public template]
