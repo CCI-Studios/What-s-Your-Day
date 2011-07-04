@@ -41,7 +41,10 @@
 	<div class="grid_4"><div class="inner">
 		<?= @helper('accordion.startPane') ?>			
 			<?= @helper('accordion.startPanel', array('title'=>'Days')); ?>
-				<?= $transaction->wyd_day_ids?>
+				<?= KFactory::get('admin::com.wyd.controller.days')
+					->set('ids', $transaction->wyd_day_ids)
+					->layout('table')
+					->display(); ?>
 			<?= @helper('accordion.endPanel') ?>
 
 			<?= @helper('accordion.startPanel', array('title'=>'Address')); ?>
