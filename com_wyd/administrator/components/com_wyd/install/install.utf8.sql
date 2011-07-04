@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `#__wyd_transactions` (
 	# user details
 	`ip` VARCHAR(15) NOT NULL,
 	`card` VARCHAR(10) NOT NULL,
-	`number` VARCHAR(15) NOT NULL,
+	`number` VARCHAR(25) NOT NULL,
 	`firstname` VARCHAR(150) NOT NULL,
 	`lastname` VARCHAR(150) NOT NULL,
 	`street1` VARCHAR(50) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `#__wyd_transactions` (
 	`city` VARCHAR(100) NOT NULL,
 	`state` VARCHAR(100) NOT NULL,
 	`zip` VARCHAR(10) NOT NULL,
-	`county` VARCHAR(10) NOT NULL,
+	`country` VARCHAR(10) NOT NULL,
 	
 	# paypal details
 	`timestamp` VARCHAR(50) NOT NULL,
