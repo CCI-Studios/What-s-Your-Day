@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS`#__wyd_days` (
 	`description` TEXT NOT NULL,
 	`date` DATE NOT NULL,
 	`link` VARCHAR(250) NOT NULL,
+	`target` VARCHAR(10) NOT NULL DEFAULT "_blank",
 	`dedication` VARCHAR(250) NOT NULL,
 	`enabled` TINYINT(1) NOT NULL,
 	
@@ -23,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `#__wyd_sponsorships` (
 	
 	`title` VARCHAR(250) NOT NULL,
 	`url` VARCHAR(250) NOT NULL,
-	`target` VARCHAR(20) DEFAULT "_blank",
+	`target` VARCHAR(20) NOT NULL DEFAULT "_blank",
 	`filename` VARCHAR(250) NOT NULL,
 	`month` INT(2),
 	`year` INT(4)
