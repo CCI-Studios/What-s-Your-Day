@@ -23,6 +23,11 @@ class ComWYDControllerToolbarMenubar extends ComDefaultControllerToolbarMenubar
 			'active'	=> ($name == 'sponsorship'),
 		));
 		
+		$this->addCommand('Transactions', array(
+			'href'	=> 'index.php?option=com_wyd&view=transactions',
+			'active'	=> ($name == 'transaction'),
+		));
+		
 		$this->addCommand('Reports', array(
 			'href'	=> 'index.php?option=com_wyd&view=reports',
 			'active'	=> ($name == 'report'),
