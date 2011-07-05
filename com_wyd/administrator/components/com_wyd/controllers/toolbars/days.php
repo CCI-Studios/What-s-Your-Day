@@ -8,13 +8,7 @@ class ComWYDControllerToolbarDays extends ComDefaultControllerToolbarDefault
 		$this
 			->addSeparator()
 			->addEnable()
-			->addDisable()
-			->addSeparator()
-			->addModal(array(
-				'href'	=> JRoute::_('index.php?option=com_config&controller=component&component=com_wyd'),
-				'icon'	=> 'icon-32-config',
-				'label'	=> 'Parameters',
-			));
+			->addDisable();
 			
 		return parent::getCommands();
 	}
