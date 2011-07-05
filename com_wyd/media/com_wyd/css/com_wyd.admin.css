@@ -32,3 +32,10 @@
 .grid_10 { width: 83.33%; }
 .grid_11 { width: 91.66%; }
 .grid_12 { width: 100%; }
+
+.-koowa-flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	width: 100%;
+}
