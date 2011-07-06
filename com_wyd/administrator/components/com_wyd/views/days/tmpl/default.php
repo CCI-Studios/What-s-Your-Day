@@ -37,7 +37,9 @@
 					</a></td>
 					<td align="center"><?= @escape($day->date)?></td>
 					<td align="center"><?= @helper('grid.enable', array('row'=>$day)) ?></td>
-					<td>&nbsp;</td>
+					<td><a href="<?= @route('view=transaction&amp;id='. $day->transaction->id); ?>">
+						<?= $day->transaction->date; ?>
+					</a></td>
 					<td align="center"><?= $day->id ?></td>
 				</tr>
 			<? endforeach; ?>
